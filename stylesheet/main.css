@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(228, 228, 228);
+}
+
+#canvas {
+    background-color: rgb(250, 250, 250);
+    width: 99%;
+    height: 99%;
+    border: rgb(14, 14, 14) 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0;
+}
+
+#ui-canvas {
+    pointer-events: none;
+    z-index: 100;
+    width: 98%;
+    border-radius: 5px;
+    height: 98%;
+    position: fixed;
+    top: calc(100svh - 99%);
+    left: calc(100vw - 99%);
+    background-color: transparent;
+}

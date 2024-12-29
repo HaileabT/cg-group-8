@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/main.css" />
+    <link rel="stylesheet" href="stylesheet/ui.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Drawing App By Section B Group 8</title>
+</head>
+<body>
+    <canvas id="canvas">
+    </canvas>
+
+    <section class="controls-section">
+        <div class="indicator"> > </div>
+        <div class="tools-box">
+            <legend style="float:right; font-size: 14px; position: relative; left: -10px;">Tools</legend>
+            <button class="tool" id="draw">Draw</button>
+            <button class="tool" id="clip">Clip out</button>
+            <button class="tool" id="erase">Erase</button>
+            <select name="" id="shapes" class="tool">
+                <option value="" selected disabled>Shapes</option>
+                <option value="triangle">Triangle</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="circle">Circle</option>
+            </select>
+        </div>
+        <div class="customizables">
+            <legend style="float:right; font-size: 14px; position: relative; left: -10px;">Settings</legend>
+            <div class="input-container">
+                <label for="storke-width" class="label">Width</label>
+                <input type="number" class="stroke-width input" value="10" name="stroke-width" id="stroke-width" max="100" min="0">
+            </div>
+            <div class="input-container">
+                <label for="stroke-color" class="label">Stroke Color</label>
+                <input type="color" class="stroke-color input" value="10" name="stroke-color" id="stroke-color">
+                <span class="color-indicator"></span>
+            </div>
+            <div class="input-container">
+                <label for="fill-color" class="label">Fill Color</label>
+                <input type="color" class="fill-color input" value="10" name="fill-color" id="fill-color">
+                <span class="color-indicator fill-color-indicator"></span>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="dist/index.js" type="module"></script>
+</body>
+</html>

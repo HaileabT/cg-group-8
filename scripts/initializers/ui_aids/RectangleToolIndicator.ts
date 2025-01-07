@@ -71,15 +71,6 @@ export class RectToolIndicator {
 
     this.divElement.style.left = `${newX}px`;
     this.divElement.style.top = `${newY}px`;
-    ctx.beginPath();
-    ctx.fillStyle = "red";
-    ctx.arc(this.anchorX ?? x, this.anchorY ?? y, 1, 0, 2 * Math.PI);
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.fillStyle = "blue";
-    ctx.arc(newX, newY, 1, 0, 2 * Math.PI);
-    ctx.fill();
 
     this.divElement.style.width = `${Math.abs((this.anchorX ?? x) - x)}px`;
     this.divElement.style.height = `${Math.abs((this.anchorY ?? y) - y)}px`;

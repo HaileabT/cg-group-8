@@ -2,9 +2,9 @@ import { mouseGlobals } from "../global/mouse.global.js";
 import { RectangleTool, Tool } from "../types/tool.js";
 import { Color } from "./helpers/Color.js";
 
-export class ClippingTool implements RectangleTool {
+export class RectEraseTool implements RectangleTool {
   public toolType!: "rect" | "free";
-  private static clippingTool: ClippingTool | null = null;
+  private static rectEraseTool: RectEraseTool | null = null;
   private constructor() {
     this.toolType = "rect";
   }
@@ -32,10 +32,10 @@ export class ClippingTool implements RectangleTool {
   }
 
   public static getTool(): Tool {
-    if (!ClippingTool.clippingTool) {
-      ClippingTool.clippingTool = new ClippingTool();
+    if (!RectEraseTool.rectEraseTool) {
+      RectEraseTool.rectEraseTool = new RectEraseTool();
     }
 
-    return ClippingTool.clippingTool;
+    return RectEraseTool.rectEraseTool;
   }
 }

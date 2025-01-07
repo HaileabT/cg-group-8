@@ -7,17 +7,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { ClipTool } from "../../canvas/ClipTool.js";
+import { RectEraseTool } from "../../canvas/RectEraseTool.js";
 import { userGlobals } from "../../global/user.global.js";
 import { elementSelector } from "../../utils/elementSelector.js";
-export const initClipButton = () => __awaiter(void 0, void 0, void 0, function* () {
+export const initRectEraseButton = () => __awaiter(void 0, void 0, void 0, function* () {
     console.log("Something");
     try {
-        const clipButton = yield elementSelector("#clip");
+        const clipButton = yield elementSelector("#rectangle-erase");
         if (!clipButton)
             throw new Error("Element not found.");
         clipButton.addEventListener("click", (e) => {
-            userGlobals.currentTool = ClipTool.getTool();
+            userGlobals.currentTool = RectEraseTool.getTool();
         });
     }
     catch (err) {

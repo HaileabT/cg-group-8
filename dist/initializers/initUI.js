@@ -13,11 +13,13 @@ import { initEraseButton } from "./tools/initEraseButton.js";
 import { initFillColorField } from "./settings/initFillColorField.js";
 import { initStrokeColorField } from "./settings/initStrokeColorField.js";
 import { initStrokeWidthField } from "./settings/initStrokeWidthField.js";
-import { initClipButton } from "./tools/initClipButton.js";
+import { initRectEraseButton } from "./tools/initRectEraseButton.js";
 import { initShapesButton } from "./tools/initShapesButton.js";
+import { initClipButton } from "./tools/initClipButton.js";
 export const initUI = () => __awaiter(void 0, void 0, void 0, function* () {
     yield initDrawButton();
     yield initEraseButton();
+    yield initRectEraseButton();
     yield initClipButton();
     yield initShapesButton();
     yield initControlsSection();

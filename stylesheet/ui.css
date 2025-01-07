@@ -110,3 +110,17 @@ span.color-indicator {
     flex-direction: column;
     gap: 20px;
 }
+
+#rect-indicator {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(238, 45, 45, 0.312);
+    border-radius: 1px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    transition: 0.1s linear;
+    pointer-events: none;
+    display: none;
+}
